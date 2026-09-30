@@ -1,0 +1,176 @@
+/* تعليق: استيراد خط القاهرة الفخم والعصري من سيرفرات جوجل لتنسيق الهوية العربية بالمسطرة */
+@import url('https://googleapis.com');
+
+/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لجميع العناصر */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تعليق: كسر التدرج البنفسجي القديم والتحول للأسود الملكي العميق المخصص لبراند Qaisi Dev */
+body {
+    background: linear-gradient(#05050a, #0c0d19);
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* إعدادات الروابط العامة */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* تعليق: تحويل اللمسة النيونية لـ span الاسم داخل اللوجو */
+header .logo span {
+    color: #00f2fe;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+
+
+/* ------------------------------------------------------------- */
+/* 2. شريط التنقل العلوي المطور (Navigation Bar) */
+/* ------------------------------------------------------------- */
+header {
+    z-index: 100;
+    width: 90%;
+    position: fixed;
+    /* تعديل لـ fixed ليبقى الشريط ثابتاً أثناء التمرير كالمواقع الفخمة */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 5, 10, 0.7);
+    backdrop-filter: blur(15px);
+    /* تأثير الزجاج الضبابي الفاخر */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 242, 254, 0.1);
+    /* خط حدود نيوني ناعم جداً */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* توسيط الهيدر العائم بالمنتصف تماماً */
+    transition: all 0.4s ease;
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+header ul li a {
+    padding: 8px 18px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #a0aec0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* تعليق: كسر الخلفية البيضاء القديمة واستبدالها بالأزرق النيوني المتوهج عند التمرير والـ Active */
+header ul li a:hover,
+header ul li a.active {
+    background: #00f2fe;
+    color: #05050a;
+    box-shadow: 0 0 15px #00f2fe;
+    font-weight: 900;
+}
+
+/* ------------------------------------------------------------- */
+/* 3. القسم الرئيسي السينمائي وطبقات الـ Parallax */
+/* ------------------------------------------------------------- */
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* تعليق: تأثير التلاشي السفلي المطور المدمج مع الأسود الملكي بدلاً من الخمري القديم */
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(to top, #05050a, transparent);
+    z-index: 10;
+    /* ضمان بقاء التلاشي فوق الجبال السفلية */
+}
+
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+    /* منع سحب الصور بالماوس لتجربة تصفح مثالية */
+}
+
+/* تعليق: تعديل طبقة القمر ومحاذاة الدمج البصري الخاصة بها */
+#a2 {
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+
+/* تعليق: تعديل وتكبير عنوان براندك الفخم بالوسط مع حقن توهج نيوني طائر يخطف الأنظار */
+.nouvil {
+    color: #ffffff;
+    font-size: 75px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: translateY(-50px);
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.4), 0 0 40px rgba(0, 242, 254, 0.2);
+    z-index: 3;
+    /* وضع الاسم خلف الجبال القريبة وأمام النجوم */
+    letter-spacing: 2px;
+}
+
+/* ------------------------------------------------------------- */
+/* 4. قسم المحتوى النصي الفاخر (Content Section) */
+/* ------------------------------------------------------------- */
+.content {
+    background-color: #05050a;
+    /* تثبيت الخلفية السوداء الملكية الموحدة لبراندك */
+    color: #e2e8f0;
+    padding: 80px 10%;
+    position: relative;
+    z-index: 15;
+}
+
+.content h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    border-right: 4px solid #00f2fe;
+    /* خط نيوني جانبي فخم يزين العنوان العربي */
+    padding-right: 15px;
+}
+
+.content p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #a0aec0;
+    text-align: justify;
+    margin-bottom: 25px;
+}
